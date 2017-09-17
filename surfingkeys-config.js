@@ -23,6 +23,10 @@ map('>', 'D');
 // S chooses a tab
 map('S', 'T');
 
+// b goes to the last tab used, B goes to the next tab used
+map('b', 'B');
+map('B', 'F');
+
 // F opens a link in a non-active new tab
 // TODO: find out why this sometimes gives the same link a higher number.
 //       I presume it's because the hint regex is different.
