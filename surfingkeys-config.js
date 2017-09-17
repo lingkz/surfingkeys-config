@@ -98,3 +98,15 @@ mapkey('o', '#8Open Search with duckduckgo',
 // available: p, P, e, E, O, T
 
 // mapkey('om', '#8Open URL from vim-like marks', 'Front.openOmnibar({type: "VIMarks"})');
+
+
+// CSS
+settings.theme = `
+    #sk_hints {
+        font-size: 12pt;
+    }
+
+    #sk_status, #sk_find {
+        font-size: 18pt;
+    }
+}`;
