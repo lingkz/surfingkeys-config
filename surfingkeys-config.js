@@ -82,13 +82,6 @@ vmap('e', 'w');
 vmap('E', 'w');
 vmap('W', 'w');
 
-mapkey(';s', '#2Open stackoverflow',
-       'window.open("https://stackoverflow.com/questions/tagged/clojure")');
-mapkey(';g', '#2Open gmail',
-       'window.open("https://gmail.com")');
-mapkey(';c', '#2Open calendar',
-       'window.open("https://calendar.google.com/calendar/render#main_7")');
-
 settings.hintAlign = "left";
 Hints.characters = "1234567890";
 
@@ -110,3 +103,16 @@ settings.theme = `
         font-size: 18pt;
     }
 }`;
+
+
+const quickmarks = {
+    "s": ["stackoverflow", "https://stackoverflow.com/questions/tagged/clojure"],
+    "g": ["gmail", "https://gmail.com"],
+    "c": ["google calendar", "https://calendar.google.com/calendar/render#main_7"],
+};
+for (const key of Object.keys(quickmarks)) {
+       const binding = ";" + key;
+       const description = "#2 Open " + quickmarks[key][0];
+       const command = "window.open(\"" + quickmarks[key][1] + "\");";
+       mapkey(binding, description, command);
+}
